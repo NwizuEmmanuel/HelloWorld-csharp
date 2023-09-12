@@ -1,34 +1,19 @@
-﻿Console.WriteLine("Is it raining?");
-bool question = Convert.ToBoolean(Console.ReadLine());
+﻿// I love milk tea service system
+var message = @"
+Welcome to I Love Milk Tea. Choose from our menu:
+1. Choco Cheese
+2. Biscoffino
+3. Vanila
+4. Chocolaty
+5. Fruity
+";
+Console.WriteLine(message);
 
-var isRainyDay = (question == true) ? "Yes, It's Rainy" : "No, It's Sunny";
+Console.Write("What's your choice? ");
 
+var userInput = Console.ReadLine();
+byte choice = Convert.ToByte(userInput);// user's choice number
 
-if (question == true)
-{
-    Console.WriteLine($"{isRainyDay}\n");
-    Console.WriteLine("Enter amount of rain gauged(cm) :");
-    int rainGauged = Convert.ToInt32(Console.ReadLine());
-
-    // to checked gauged rain
-    // if 0 - 60 is normal rainfall
-    // 61 - 80 is heavy rainfall
-    // 81 and above is thurnderstorm
-
-    if (rainGauged <= 60)
-    {
-        Console.WriteLine("It's a normal rainfall.");
-    }
-    else if (rainGauged <= 80)
-    {
-        Console.WriteLine("Ooh no, it's a heavy rainfall");
-    }
-    else if (rainGauged > 81)
-    {
-        Console.WriteLine("You can't go outside. stay put it's a Thurnderstorm.");
-    }
-}
-else
-{
-    Console.WriteLine("Enjoy your day.");
-}
+Console.Write("What's your sugar level(in %)? ");
+var sugarLevelInput = Console.ReadLine();
+int sugarLevel = Convert.ToInt32(sugarLevelInput);// user's sugar level
