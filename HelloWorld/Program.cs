@@ -18,14 +18,17 @@ if (question == true)
     if (rainGauged <= 60)
     {
         Console.WriteLine("It's a normal rainfall.");
-    }else if (rainGauged <= 80)
+    }
+    else if (rainGauged <= 80)
     {
         Console.WriteLine("Ooh no, it's a heavy rainfall");
-    }else if (rainGauged > 81)
+    }
+    else if (rainGauged > 81)
     {
         Console.WriteLine("You can't go outside. stay put it's a Thurnderstorm.");
     }
-}else
+}
+else
 {
     Console.WriteLine("Enjoy your day.");
 }
