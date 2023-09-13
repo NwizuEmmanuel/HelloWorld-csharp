@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        listCars();
+        checkForEvenNumber();
     }
 
     private static void superMario()
@@ -30,5 +30,22 @@ internal class Program
         {
             Console.WriteLine(car);
         }
+    }
+
+    private static void checkForEvenNumber()
+    {
+        int[] numbers = { 1, 3, 4, 10 };
+        int countEvenNumbers = 0;
+
+        foreach(int i in numbers)
+        {
+            if (i % 2 == 0)
+            {
+                countEvenNumbers++;
+            }
+        }
+
+        var message = $"There are {countEvenNumbers} even numbers";
+        Console.WriteLine(message);
     }
 }
