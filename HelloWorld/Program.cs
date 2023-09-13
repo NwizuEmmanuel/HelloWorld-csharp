@@ -1,10 +1,14 @@
-﻿// countdown
-Console.Write("Starting number? ");
-var input = Console.ReadLine();
-int numberOfSeconds = Convert.ToInt32(input);
+﻿// super mario
 
-do
+Console.Write("Height? ");
+var input = Console.ReadLine();
+int height = Convert.ToInt32(input);
+
+for (int i = 1; i <= height; i++)
 {
-    Console.Write(numberOfSeconds + " ");
-    numberOfSeconds--;
-} while (numberOfSeconds >= 1);
+    for (int j = 0; j < i; j++)
+    {
+        Console.Write("#");
+    }
+    Console.WriteLine();
+}
