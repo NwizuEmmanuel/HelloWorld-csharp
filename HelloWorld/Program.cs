@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        checkForEvenNumber();
+        haltCheckForOddNumbers();
     }
 
     private static void superMario()
@@ -48,4 +48,24 @@ internal class Program
         var message = $"There are {countEvenNumbers} even numbers";
         Console.WriteLine(message);
     }
+
+    private static void haltCheckForOddNumbers()
+    {
+        int[] numbers = { 2, 4, 5, 3, 9 };
+        int checkedNumbers = 0;
+
+        foreach(int i in numbers)
+        {
+            checkedNumbers++;
+            if (i % 2 != 0)
+            {
+                break;
+            }
+        }
+
+        var message = "Odd number detected.\nHalting program\nDone\n";
+        var message2 = $"Total checked numbers: {checkedNumbers}\nTotal number: {numbers.Length}";
+        Console.WriteLine(message);
+        Console.WriteLine(message2);
+    } 
 }
